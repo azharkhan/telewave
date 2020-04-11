@@ -1,0 +1,28 @@
+{
+  "name": "telewave",
+  "version": "1.0.0",
+  "description": "telewave - a wavelength app for remote play",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azharkhan/telewave.git"
+  },
+  "keywords": [
+    "game",
+    "remote",
+    "covid19",
+    "hobbies"
+  ],
+  "author": "Gustavo Jeuken (gjeuken)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azharkhan/telewave/issues"
+  },
+  "homepage": "https://github.com/azharkhan/telewave#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
