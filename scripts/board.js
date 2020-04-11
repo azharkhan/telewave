@@ -1,4 +1,7 @@
-var randpos = 0
+import data from './data';
+import './draw'
+
+export let randpos = 0
 
 //init
 $("#seed").keyup(function() {
@@ -8,7 +11,7 @@ $("#seed").keyup(function() {
 $("#seed").val(Math.floor(Math.random() * 1000));
 fire();
 
-function clearboard(){
+export function clearboard() {
 		document.getElementById("score").innerHTML = ''
 		var canvas = document.getElementById('wave');
 		var ctx = canvas.getContext("2d");
@@ -19,7 +22,7 @@ function clearboard(){
 
 
 
-function fire() {
+export function fire() {
 		clearboard();
 		//get seed and set the seed for randomizer
 		var seed = document.getElementById("seed").value;

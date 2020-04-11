@@ -1,3 +1,5 @@
+import { fire, clearboard, randpos } from './board'
+
 var canvas = document.getElementById('wave');
 var ctx = canvas.getContext("2d");
 var cw = canvas.width;
@@ -10,12 +12,12 @@ var recW3 = 5*binW;
 
 
 
-function position(x){
+export function position(x){
 		return 5 + (x/1005)*cw;
 }
 
-function draw(x){
-		posx = position(x)
+export function draw(x){
+		let posx = position(x)
 		ctx.beginPath();
 		ctx.fillStyle = "#d3961f";
 		ctx.fillRect(posx-recW3/2, 0, recW3, 150);
@@ -33,8 +35,8 @@ function draw(x){
 
 }
 
-function drawguess(){
-		clearboard()	
+export function drawguess(){
+		clearboard()
 		draw(randpos)
 
 		var guess = document.getElementById("guesser").value
@@ -50,7 +52,7 @@ function drawguess(){
 
 var points = 0
 
-function score(randpos, guess){
+export function score(randpos, guess){
 		if (between(guess, randpos - binW/2, randpos + binW/2)){
 				document.getElementById("score").innerHTML = '<div class="score">4 points!!!</div>';
 				points = 4;
@@ -67,27 +69,31 @@ function score(randpos, guess){
 }
 
 
-function between(x, min, max) {
+export function between(x, min, max) {
 		return x >= min && x <= max;
 }
 
-function button_peak(){
+// temporarily expose functions to window
+
+window.button_peak = function button_peak(){
 		if (window.confirm("Are you sure you want to peak?")) {
 				draw(randpos);
 		}
 }
 
 
-function button_guess(){
+window.button_guess = function button_guess(){
 		if (window.confirm("Is this your final guess?")) {
 				drawguess();
 		}
 }
 
-function update_seed(){
+window.update_seed = function update_seed(){
 		$("#seed").val(Math.floor(Math.random() * 1000));
 		fire();
 }
+
+window.clearboard = clearboard;
 
 
 

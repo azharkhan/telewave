@@ -253,3 +253,4 @@ var data = [
 ["Underrated game","Overrated game"]
 ];
 
+export default data;

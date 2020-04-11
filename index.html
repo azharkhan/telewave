@@ -8,17 +8,6 @@
 		<meta name="description" content="Telewave">
 		<meta name="author" content="Gus">
 		<link rel="stylesheet" href="styles/styles.css?v=1.0">
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-162367629-2');
-		</script>
-
 	</head>
 
 	<body>
@@ -35,9 +24,10 @@
 				<button id="reset" onclick="clearboard()">Clear</button>
 			</div>
 		</div>
-		<script src="scripts/jquery-3.4.1.min.js"></script>
-		<script src="scripts/seedrandom.js"></script>
-		<script src="scripts/data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="./scripts/seedrandom.js"></script>
+		<!-- <script src="./scripts/data.js"></script> -->
 
 		<canvas id="wave" width="1000" height="150" style="border:5px solid #d3d3d3;">
 		</canvas>
@@ -88,8 +78,8 @@
 
 		</div>
 
-		<script src="scripts/board.js"></script>
-		<script src="scripts/draw.js"></script>
+		<script src="./scripts/board.js"></script>
+		<!-- <script src="./scripts/draw.js"></script> -->
 		</div>
 
 	</body>
